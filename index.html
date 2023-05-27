@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Schyntax</title>
+        <link rel="icon" href="assets/favicon.ico">
+        <style>
+* {
+    box-sizing: border-box;
+}
+
+body > div {
+    margin: 1em 0 1em 0;
+}
+
+.syntax {
+    display: inline-block;
+    margin: .25em;
+    border: 2pt solid;
+    padding: 2pt 1pt 2pt 1pt;
+    vertical-align: middle;
+    border-radius: 2pt;
+    font-family: monospace;
+}
+.syntax-literal {
+    height: 1.75em;
+    border-color: #0003;
+}
+.syntax-type-list {
+    /* list elements nest, low opacity for visual indication of nesting */
+    background-color: #43e2;
+    border-color: #0001;
+}
+.syntax-type-list > legend {
+    display: none;
+}
+.syntax-type-symbol {
+    /* literal elements should be very opaque, only with some tint from its container */
+    background-color: #ffcb9ede;
+}
+.syntax-type-symbol > legend {
+    height: 0;
+    width 1em;
+    transform: translate(0%, -.65em);
+    font-family: monospace, sans-serif;
+}
+.syntax-type-symbol.syntax-attr-builtin {
+    background-color: #ffdbaede;
+}
+.syntax-type-symbol.syntax-attr-keyword {
+    background-color: #cb9effde;
+}
+.syntax-type-symbol.syntax-attr-assignee {
+    background-color: #8ae5e7de;
+}
+.syntax-type-symbol.syntax-attr-boundVariable {
+    background-color: #9effcbde;
+}
+
+.syntax-type-numeric {
+    background-color: #ffe600bf;
+}
+
+.syntax-type-proto {
+    background-color: #577eb340;
+    box-shadow: 0 0 11px #6d7efaff;
+}
+
+.syntax-dropped {
+    margin-left: 2em;
+}
+
+        </style>
+    </head>
+    <body>
+        <h1>Schyntax</h1>
+
+        <div id="editor"></div>
+        <pre id="textual"></pre>
+
+        <img src="assets/concept.png" width=700>
+
+        <script src="main.js"></script>
+        <script defer>
+            renderProgram();
+        </script>
+    </body>
+</html>
