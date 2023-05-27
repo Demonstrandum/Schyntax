@@ -11,3 +11,11 @@ Currently very ugly, bright and bold.  Just a proof of concept.
 
 Works especially well for languages aiming for homoiconicity.
 
+### Try it out
+
+Run
+
+```console
+$ python -m http.server
+$ open http://localhost:8000
+```
